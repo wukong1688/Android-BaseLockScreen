@@ -62,7 +62,7 @@ public class LockScreenService extends Service {
             NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             Intent intent = new Intent(this, DetailActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            Notification notification = new NotificationCompat.Builder(this, "default")
+            Notification notification = new NotificationCompat.Builder(this)
                     .setTicker("APP正在运行")
                     .setAutoCancel(false)
                     .setContentTitle("APP正在运行")
